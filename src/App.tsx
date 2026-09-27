@@ -85,8 +85,9 @@ function App() {
 - Keep answers under 200 words unless asked for more.
 Current mode: ${mode}.`;
 
-     console.log('GROQ KEY:', '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');
+    
 
+      console.log('KEY BEING SENT:', import.meta.env.VITE_GROQ_API_KEY);
       const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -417,7 +418,7 @@ Current mode: ${mode}.`;
             </div>
           </div>
           <div className="pt-8 text-center">
-            <p className="text-xs text-white/40">© 2026 RoboMentor. Built for the Come Build with AI Hackathon. Powered by Google Gemini.</p>
+            <p className="text-xs text-white/40">© 2026 RoboMentor.</p>
           </div>
         </div>
       </footer>
